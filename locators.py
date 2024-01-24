@@ -3,14 +3,14 @@ from selenium.webdriver.common.by import By
 
 class OrionHomePage(object):
     COOKIE_DECLINE = (By.CSS_SELECTOR, '#hs-eu-decline-button')
-    COMPANY_NAVBAR = (By.XPATH, "//span[normalize-space()='Company']")
-    PERSPECTIVES_NAVBAR = (By.XPATH, "//span[normalize-space()='Perspectives']")
-    COMPANY_CAREER_DROP = (By.XPATH, '//*[@id="primaryMenu"]/ul/li[5]/div/div/div/div[1]/a[1]')
+    COMPANY_NAVBAR = (By.XPATH, '//a[@id="menu-27"]')
+    PERSPECTIVES_NAVBAR = (By.XPATH, '//a[@id="menu-28"]')
+    COMPANY_CAREER_DROP = (By.XPATH, '//a[contains(@class, "menu-item-2580")]')
 
 
 class OrionCareerPage(object):
-    LOCATION = (By.XPATH, '//*[@id="post-108"]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div[2]/b')
-    LOCATION_SELECT_VILNIUS = (By.XPATH, '//ul/li[@data-index="10"]')
+    LOCATION = (By.XPATH, '//*[@id="post-108"]//b')
+    LOCATION_SELECT_VILNIUS = (By.XPATH, '//ul/li[contains(text(), "Vilnius")]')
     SEARCH_BUTTON = (By.XPATH, '//*[@id="post-108"]/div[1]/div[1]/div[2]/div[2]/button')
 
 

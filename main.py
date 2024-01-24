@@ -38,15 +38,11 @@ def main():
         search_button.click()
 
         # Interact with the Career results page
-        first_result_container = driver.browser.find_element(*CareerResultPage.RESULTS_CONTAINER)
-        first_result_title_link = first_result_container.find_element(*CareerResultPage.FIRST_RESULT)
+        first_result_title_link = driver.browser.find_element(*CareerResultPage.FIRST_RESULT)
         first_result_title_link.click()
-
-        # Add more actions as needed
 
     finally:
         time.sleep(5)
-        # Close the browser
         driver.browser.quit()
 
 
