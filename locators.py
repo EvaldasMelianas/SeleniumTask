@@ -11,7 +11,7 @@ class OrionHomePage(object):
 class OrionCareerPage(object):
     LOCATION = (By.XPATH, '//*[@id="post-108"]//b')
     LOCATION_SELECT_VILNIUS = (By.XPATH, '//ul/li[contains(text(), "Vilnius")]')
-    SEARCH_BUTTON = (By.XPATH, '//*[@id="post-108"]/div[1]/div[1]/div[2]/div[2]/button')
+    SEARCH_BUTTON = (By.XPATH, '//div[@class="container"]//button[contains(text(), "Search")]')
 
 
 class CareerResultPage(object):
