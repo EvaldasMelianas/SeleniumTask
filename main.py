@@ -21,6 +21,8 @@ def main():
         # Navigate to the Careers page
         perspectives_navbar = driver.browser.find_element(*OrionHomePage.PERSPECTIVES_NAVBAR)
         company_navbar = driver.browser.find_element(*OrionHomePage.COMPANY_NAVBAR)
+
+        # Below double move action is used to bypass issue where navbar does not appear on initial move
         driver.action.move_to_element(perspectives_navbar)
         driver.action.move_to_element(company_navbar).perform()
         company_career_drop = driver.browser.find_element(*OrionHomePage.COMPANY_CAREER_DROP)
